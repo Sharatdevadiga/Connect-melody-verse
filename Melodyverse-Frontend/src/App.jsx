@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import ForgotPassword from "./pages/ForgotPassword";
 
 // Lazy loading components
 const Signup = lazy(() => import("./pages/Signup"));
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
+        <Route path="forgotPassword" element={<ForgotPassword />} />
       </Routes>
       <ToastContainer
         position="top-center"

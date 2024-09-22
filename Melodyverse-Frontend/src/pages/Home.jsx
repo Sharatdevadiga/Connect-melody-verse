@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Button from "../components/general/Button";
 import Navbar from "../components/navigation/Navbar";
 
 function Home() {
@@ -9,7 +8,7 @@ function Home() {
       <div className="flex flex-col items-center justify-center w-screen h-screen gap-12">
         <div className="flex flex-col items-center justify-center gap-3 text-center">
           <h1 className="sm:text-heading-l md:text-[64px]">
-            Tune into your wibe
+            Tune into your vibe
           </h1>
           <p className="">Discover a world of music tailored just for you.</p>
         </div>

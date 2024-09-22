@@ -117,7 +117,7 @@ function LoginPage() {
         </button>
 
         <p className="text-center text-body-s">
-          <Link className="text-primary" to="/forgot-password">
+          <Link className="text-primary" to="/forgotPassword">
             Forgot password
           </Link>{" "}
           / Don't have an account?{" "}
