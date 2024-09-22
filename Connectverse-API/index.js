@@ -1,12 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
-
-import connectDB from "./config/connect.js";
-import express from "express";
-import cookieParser from "cookie-parser";
-import cors from "cors";
-
-import authRouter from "./routes/authRoutes.js";
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
+const connectDB = require("./config/db"); // Assuming you have a connectDB function
 
 const app = express();
 
@@ -17,11 +12,11 @@ app.use(cookieParser());
 // CONNECT TO DATABASE
 connectDB();
 
-// cors
+// CORS Configuration
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
-  "https://connect-melody-verse.vercel.app/",
+  "https://connect-melody-verse.vercel.app",
 ];
 
 app.use(
@@ -33,15 +28,15 @@ app.use(
         callback(new Error("Not allowed by CORS"));
       }
     },
-    credentials: true,
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
 );
 
-// ROUTES
-app.use("/api/v1/auth", authRouter);
+// Your routes here
+app.use("/api/v1/auth", require("./routes/authRoutes"));
 
-// sTART THE SERVER
-const PORT = process.env.PORT || 3000;
+// Start the server
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log("✅ Server started successfully on port", PORT);
+  console.log(`Server running on port ${PORT}`);
 });
