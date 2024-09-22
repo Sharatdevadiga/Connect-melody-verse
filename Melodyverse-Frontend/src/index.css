@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  box-sizing: border-box;
+}
+
+@layer base {
+  h1 {
+    @apply font-outfit text-heading-l font-light;
+  }
+
+  h2 {
+    @apply font-outfit text-heading-m font-light;
+  }
+
+  h3 {
+    @apply font-outfit text-heading-s font-medium;
+  }
+
+  h4 {
+    @apply font-outfit text-heading-xs font-medium;
+  }
+
+  p.body-m {
+    @apply font-outfit text-body-m font-light;
+  }
+
+  p.body-s {
+    @apply font-outfit text-body-s font-light;
+  }
+}
+
+@layer components {
+  .btn--cta {
+    @apply rounded-md bg-primary p-4 transition-all duration-300 hover:bg-blue-50 hover:text-gray;
+  }
+
+  .form--auth {
+    @apply flex w-full flex-col gap-4 rounded-2xl bg-gray p-6 xs:w-80 sm:w-96;
+  }
+}
+
+/* For auto-filled input fields */
+/* Autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: #161d2f !important;
+  color: #eff6ff !important;
+  box-shadow: 0 0 0px #161d2f !important;
+  -webkit-text-fill-color: #eff6ff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-moz-autofill,
+input:-moz-autofill:hover,
+input:-moz-autofill:focus,
+input:-moz-autofill:active {
+  background-color: #161d2f !important;
+  color: #eff6ff !important;
+  box-shadow: 0 0 0px 1000px #161d2f inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-ms-input-placeholder {
+  background-color: #161d2f !important;
+  color: #eff6ff !important;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+}
+
+.xyz {
+  background: #0000007f;
+}
