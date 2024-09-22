@@ -1,0 +1,8 @@
+# Ignore node_modules folders in any subdirectory
+node_modules/
+Connectverse-API/node_modules/
+Melodyverse-Frontend/node_modules/
+
+# Ignore environment files in any subdirectory
+*.env
+server/.env
