@@ -21,7 +21,7 @@ connectDB();
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
-  "https://connect-melody-verse.vercel.app/",
+  "https://connect-melody-verse.vercel.app",
 ];
 
 app.use(
