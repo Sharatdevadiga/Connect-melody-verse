@@ -25,6 +25,7 @@ const createSendToken = (user, statusCode, res) => {
       ),
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
+      sameSite: "None",
     };
 
     res.cookie("refreshToken", refreshToken, cookieOptions);
@@ -128,6 +129,7 @@ export const logout = async (req, res) => {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
+    sameSite: "None",
   });
 
   //   SEND RESPONSE
