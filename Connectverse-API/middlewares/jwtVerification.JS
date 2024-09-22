@@ -1,7 +1,7 @@
 import User from "../models/userModel.js";
 import jsonwebtoken from "jsonwebtoken";
 
-export const protect = async (req, res, next) => {
+const protect = async (req, res, next) => {
   let token;
 
   // GET THE TOKEN FROM THE COOKIE OR THE HEADERS
@@ -43,3 +43,5 @@ export const protect = async (req, res, next) => {
     });
   }
 };
+
+export default protect;
