@@ -36,7 +36,7 @@ const protect = async (req, res, next) => {
 
     req.user = user;
     next();
-  } catch (err) {
+  } catch {
     return res.status(401).json({
       status: "failed",
       message: "Invalid token",

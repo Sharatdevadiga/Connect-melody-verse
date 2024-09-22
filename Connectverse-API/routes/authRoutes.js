@@ -5,7 +5,7 @@ import {
   logout,
   refreshToken,
 } from "../controllers/authController.js";
-import protect from "../middlewares/jwtVerificcation.js";
+import protect from "../middlewares/protect.js";
 
 const authRouter = express.Router();
 
