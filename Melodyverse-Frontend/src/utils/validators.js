@@ -5,9 +5,26 @@ const validateEmail = function (email) {
 };
 
 const validatePassword = function (password) {
-  const isValid = password.length >= 8;
-  const errorMessage = "Atleast 8 characters";
-  return { isValid, errorMessage };
+  const hasMinLength = password.length >= 8;
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+  let errorMessage = "";
+  if (!hasMinLength) errorMessage += "8+ ch, ";
+  if (!hasUpperCase) errorMessage += "1 cap, ";
+  if (!hasLowerCase) errorMessage += "1 small, ";
+  if (!hasNumber) errorMessage += "1 num,";
+  if (!hasSpecialChar) errorMessage += "1 special ch";
+
+  const isValid =
+    hasMinLength && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar;
+
+  return {
+    isValid,
+    errorMessage: isValid ? "" : errorMessage.trim().replace(/,\s*$/, ""), // Removes trailing comma and space
+  };
 };
 
 const validateRepeatPassword = function (value, values) {

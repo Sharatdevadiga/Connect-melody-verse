@@ -3,7 +3,7 @@ function Button({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="flex items-center justify-center gap-1 rounded-md bg-primary px-3 py-1 text-body-s transition-all hover:bg-red-500 active:scale-90 xs:text-body-m"
+      className="flex items-center justify-center gap-1 rounded-md bg-primary px-3 py-1 text-body-s transition-all hover:rounded-full active:scale-90 xs:text-body-m"
     >
       {children}
     </button>

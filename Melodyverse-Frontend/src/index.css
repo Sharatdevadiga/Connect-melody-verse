@@ -7,27 +7,27 @@ html {
 
 @layer base {
   h1 {
-    @apply font-outfit text-heading-l font-light;
+    @apply text-heading-l font-light;
   }
 
   h2 {
-    @apply font-outfit text-heading-m font-light;
+    @apply text-heading-m font-light;
   }
 
   h3 {
-    @apply font-outfit text-heading-s font-medium;
+    @apply text-heading-s font-medium;
   }
 
   h4 {
-    @apply font-outfit text-heading-xs font-medium;
+    @apply text-heading-xs font-medium;
   }
 
   p.body-m {
-    @apply font-outfit text-body-m font-light;
+    @apply text-body-m font-light;
   }
 
   p.body-s {
-    @apply font-outfit text-body-s font-light;
+    @apply text-body-s font-light;
   }
 }
 
@@ -85,4 +85,15 @@ input:-ms-input-placeholder {
 
 .xyz {
   background: #0000007f;
+}
+
+.home-bg {
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../public/background.png");
+  background-size: cover;
+  background-position: center;
 }

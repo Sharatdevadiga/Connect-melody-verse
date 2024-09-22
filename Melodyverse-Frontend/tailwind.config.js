@@ -14,6 +14,9 @@ export default {
 
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
+        amatic: ["'Amatic SC'", "cursive"],
+        dancing: ["'Dancing Script'", "cursive"],
+        fugaz: ["'Fugaz One'", "cursive"],
       },
 
       fontSize: {
