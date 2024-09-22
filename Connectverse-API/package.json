@@ -7,7 +7,8 @@
     "start": "node index.js",
     "start:dev": "nodemon index.js",
     "lint": "eslint .",
-    "lint:watch": "nodemon --exec \"npm run lint\" --ext js"
+    "lint:watch": "nodemon --exec \"npm run lint\" --ext js",
+    "build": "echo 'No build steps needed'"
   },
   "author": "Sharath Devadiga",
   "license": "ISC",
